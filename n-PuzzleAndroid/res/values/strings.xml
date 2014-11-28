@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name"> n-PuzzleAndroid </string>
+    	
+    <!-- Nav Drawer Menu Items -->
+    <string-array name="nav_drawer_titles">
+        <item>Home</item>
+        <item>Highscores</item>
+        <item>About</item>
+    </string-array>
+
+    <string name="drawer_open">Open navigation drawer</string>
+    <string name="drawer_close">Close navigation drawer</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- Activities -->
+    <string name="hello_world">Hello World!</string>
+    <string name="loadimg">Load image</string>
+    <string name="gameacitvity"> n-puzzle</string>
+    <string name="highscore"> Highscore </string>
+
+    <!-- Load img activity -->
+    <string name="imgcontent"> Image to play the game with. </string>
+    <string name="slidingdrawer"> Choose difficulty </string>
+    <string name="easy"> Easy </string>
+    <string name="medium"> Medium </string>
+    <string name="hard"> Hard </string>
+    <string name="image_preview"> Images </string>
+    <string-array name="mode">
+        <item>Easy</item>
+        <item>Medium</item>
+        <item>Hard</item>
+    </string-array>
+    
+    <!-- Action bar items -->
+    <string name="action_websearch">Web search</string>
+    <string name="app_not_available">Sorry, there\'s no web browser available</string>
+    <string name="action_example">Example action</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_show_solution"> Show solution</string>
+    <string name="action_reset_puzzle"> Reset puzzle</string>
+    <string name="action_camera_intent"> Take picture with camera</string>
+    <string name="action_gallery_intent"> Pick picture from gallery</string>
+    <string name="action_info_loadimage"> Information </string>
+    
+    <!-- Image Split -->
+    <string name="hello">Hello World, ImageActivity!</string>
+    <string name="button_text">Choose Image</string>
+    <string name="three"> Easy </string>
+    <string name="four"> Medium </string>
+    <string name="five"> Hard </string>
+
+   
+
+</resources>

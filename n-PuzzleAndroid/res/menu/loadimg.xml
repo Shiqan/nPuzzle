@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+     
+     <item android:id="@+id/action_info"
+        app:showAsAction="never"
+        android:orderInCategory="1"
+        android:icon="@drawable/ic_info_outline_grey"
+        android:title="@string/action_info_loadimage" />
+     
+     <item android:id="@+id/action_camera_intent"
+        app:showAsAction="never"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_camera_grey"
+        android:title="@string/action_camera_intent" />
+     
+     <item android:id="@+id/action_gallery_intent"
+        app:showAsAction="never"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_collections_grey"
+        android:title="@string/action_gallery_intent" />
+</menu>
