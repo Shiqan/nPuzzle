@@ -43,6 +43,10 @@
             android:label="@string/highscore" />
         
         <activity
+            android:name="nl.ferron.saan.AboutActivity"
+            android:label="@string/about" />
+        
+        <activity
             android:name="nl.ferron.saan.GameActivity"
             android:label="@string/gameacitvity" />
         

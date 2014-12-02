@@ -1,5 +1,7 @@
 package nl.ferron.saan;
 
+import java.util.ArrayList;
+
 import android.annotation.TargetApi;
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -16,6 +18,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.util.Log;
 import android.view.Display;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -28,6 +31,7 @@ import android.view.ViewGroup.LayoutParams;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -35,20 +39,48 @@ public class LoadImageActivity extends DrawerActivity {
 
 	private static final int SELECT_N_PHOTOS = 100;
 	static final int REQUEST_IMAGE_CAPTURE = 1;
-	int numberTiles = 9;
+	int numberTiles = 16;
+	
+	private ArrayList<String> list = new ArrayList<String>();
+	private ArrayList<Integer> x = new ArrayList<Integer>(); 
+	private ListView test;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.act_load_img);
+		setContentView(R.layout.act_load_img2);
 		getSupportActionBar().setTitle("Choose Image");
-
-		onCreateDialog(null).show();
+		test = (ListView) findViewById(R.id.list);
 		
-        addImageButtons(null);
+		//setModeDialog(null).show();
+		
+		test();
+		test.setAdapter(new ImageAdapter(this, x, list));
+        //addImageButtons(null);
+		
 	}
 	
-	public Dialog onCreateDialog(Bundle savedInstanceState) {
+	private void test() {
+		for (int i = 0; i<10; i++) {
+        	try {
+	        	//Drawable drawable = getResources().getDrawable(getResources()
+	            //        .getIdentifier("puzzle_"+i, "drawable", getPackageName()));
+        	
+	        	int drawableId =  getResources().getIdentifier("puzzle_"+i, "drawable", getPackageName());
+	        	if (drawableId != 0) {
+	        		list.add("puzzle_"+i);
+	        		x.add(drawableId);
+	        	}
+	        	
+			} catch (NotFoundException e) {
+				// nothing
+				        		
+			}
+		}
+		
+	}
+
+	public Dialog setModeDialog(Bundle savedInstanceState) {
 	    AlertDialog.Builder builder = new AlertDialog.Builder(this);
 	    builder.setTitle("Choose difficulty")
 	           .setItems(R.array.mode, new DialogInterface.OnClickListener() {
@@ -71,6 +103,7 @@ public class LoadImageActivity extends DrawerActivity {
 	}
 	
 	@TargetApi(Build.VERSION_CODES.JELLY_BEAN)
+	// TODO switch to listview layout
 	private void addImageButtons(final Bitmap resource) {
 		
 		LinearLayout hsvll = (LinearLayout) findViewById(R.id.hsvLinearlayout);
@@ -107,13 +140,13 @@ public class LoadImageActivity extends DrawerActivity {
         			Intent myIntent = new Intent(getApplicationContext(), GameActivity.class);
         			myIntent.putExtra("numberTiles", numberTiles);
         			myIntent.putExtra("Drawable", scaledBitmap);
+        			myIntent.putExtra("new", true);
         			startActivity(myIntent);
         			finish();
         		};
             });       
             
             hsvll.addView(ib);
-            //scaledBitmap.recycle();
             
 		} else {
 	        for (int i = 0; i<10; i++) {
@@ -141,6 +174,7 @@ public class LoadImageActivity extends DrawerActivity {
 		        			Intent myIntent = new Intent(getApplicationContext(), GameActivity.class);
 		        			myIntent.putExtra("numberTiles", numberTiles);
 		        			myIntent.putExtra("imageID", drawableId);
+		        			myIntent.putExtra("new", true);
 		        			startActivity(myIntent);
 		        			finish();
 		        		};
@@ -202,11 +236,18 @@ public class LoadImageActivity extends DrawerActivity {
 	        case R.id.action_info:
 	        	showInfo();
 	        	return true;
+	        case R.id.action_set_mode:
+	        	setMode();
+	        	return true;
 	        default:
 	            return super.onOptionsItemSelected(item);
 	    }
 	}
 	
+	private void setMode() {
+		setModeDialog(null).show();		
+	}
+
 	private void showInfo() {
 		LayoutInflater inflater = getLayoutInflater();
 		View layout = inflater.inflate(R.layout.toast_layout,

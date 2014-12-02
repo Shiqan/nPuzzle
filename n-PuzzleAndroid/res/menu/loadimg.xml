@@ -8,6 +8,12 @@
         android:icon="@drawable/ic_info_outline_grey"
         android:title="@string/action_info_loadimage" />
      
+     <item android:id="@+id/action_set_mode"
+        app:showAsAction="never"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_action_settings"
+        android:title="@string/action_set_mode" />
+     
      <item android:id="@+id/action_camera_intent"
         app:showAsAction="never"
         android:orderInCategory="100"

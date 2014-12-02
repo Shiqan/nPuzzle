@@ -128,12 +128,16 @@ public abstract class DrawerActivity extends ActionBarActivity {
 					startActivity(new Intent(getApplicationContext() ,MainActivity.class));
 					finish();
 		   			break;
-		   		case 1:		   			
+				case 1:
+					startActivity(new Intent(getApplicationContext() ,LoadImageActivity.class));
+					finish();
+		   			break;
+		   		case 2:		   			
 		   			startActivity(new Intent(getApplicationContext() ,HighscoreActivity.class));
 	            	finish();
 		   			break;
-		   		case 2:		   			
-		   			startActivity(new Intent(getApplicationContext() ,LoadImageActivity.class));
+		   		case 3:		   			
+		   			startActivity(new Intent(getApplicationContext() ,AboutActivity.class));
 	            	finish();
 		   			break;
 		   		

@@ -6,6 +6,7 @@
     <!-- Nav Drawer Menu Items -->
     <string-array name="nav_drawer_titles">
         <item>Home</item>
+        <item>New game</item>
         <item>Highscores</item>
         <item>About</item>
     </string-array>
@@ -19,7 +20,8 @@
     <string name="hello_world">Hello World!</string>
     <string name="loadimg">Load image</string>
     <string name="gameacitvity"> n-puzzle</string>
-    <string name="highscore"> Highscore </string>
+    <string name="highscore"> Highscores </string>
+    <string name="about"> About </string>
 
     <!-- Load img activity -->
     <string name="imgcontent"> Image to play the game with. </string>
@@ -44,9 +46,10 @@
     <string name="action_camera_intent"> Take picture with camera</string>
     <string name="action_gallery_intent"> Pick picture from gallery</string>
     <string name="action_info_loadimage"> Information </string>
+    <string name="action_set_mode"> Set mode </string>
     
     <!-- Image Split -->
-    <string name="hello">Hello World, ImageActivity!</string>
+    <string name="hello">Hello World!</string>
     <string name="button_text">Choose Image</string>
     <string name="three"> Easy </string>
     <string name="four"> Medium </string>
