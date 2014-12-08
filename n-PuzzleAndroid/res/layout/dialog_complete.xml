@@ -2,7 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="#ebebe3">
     <ImageView
         android:src="@drawable/ic_launcher"
         android:layout_width="match_parent"
@@ -10,6 +11,15 @@
         android:scaleType="center"
         android:background="#FFFFBB33"
         android:contentDescription="@string/app_name" />
+
+    <TextView
+        android:id="@+id/congrat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/completed"
+        android:textAppearance="?android:attr/textAppearanceLarge" 
+        android:layout_gravity="center"/>
+
     <EditText
         android:id="@+id/username"
         android:inputType="text"
@@ -19,6 +29,6 @@
         android:layout_marginLeft="4dp"
         android:layout_marginRight="4dp"
         android:layout_marginBottom="4dp"
-        android:hint="Name" />
+        android:hint="@string/completed_hint" />
 
 </LinearLayout>

@@ -8,7 +8,8 @@
     <ImageView
             android:id="@+id/thumbnail"
             android:layout_width="50dip"
-            android:layout_height="50dip"/>
+            android:layout_height="50dip"
+            android:contentDescription="@string/images"/>
 
     <TextView
         android:id="@+id/title"
@@ -16,7 +17,6 @@
         android:layout_height="wrap_content"
         android:paddingLeft="10dp"
         android:layout_toRightOf="@+id/thumbnail"
-        android:text="Rihanna Love the way lie"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="#040404" />
  

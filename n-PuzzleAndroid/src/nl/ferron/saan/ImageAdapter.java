@@ -6,7 +6,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +13,9 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+/**
+ * Adapter for the listview to show the images to play the game with
+ */
 public class ImageAdapter extends BaseAdapter {
     private static Context mContext;
     private ArrayList<Integer> mThumbnails;
@@ -53,10 +55,8 @@ public class ImageAdapter extends BaseAdapter {
          
         //imgIcon.setImageResource(mThumbnails.get(position));
         
-		imgIcon.setImageBitmap(decodeSampledBitmapFromResource(mThumbnails.get(position), imgWidth, imgHeight));
-        
+		imgIcon.setImageBitmap(decodeSampledBitmapFromResource(mThumbnails.get(position), imgWidth, imgHeight));       
         txtTitle.setText(mTitles.get(position));
-        
         return convertView;
     }
     
@@ -78,8 +78,7 @@ public class ImageAdapter extends BaseAdapter {
 		final BitmapFactory.Options options = new BitmapFactory.Options();
 	    options.inJustDecodeBounds = true;
 	    BitmapFactory.decodeResource(mContext.getResources(), file, options);
-	    options.inSampleSize = calculateInSampleSize(options, reqWidth,
-	            reqHeight);
+	    options.inSampleSize = calculateInSampleSize(options, reqWidth, reqHeight);
 	    options.inJustDecodeBounds = false;
 	    return BitmapFactory.decodeResource(mContext.getResources(), file, options);
 	}

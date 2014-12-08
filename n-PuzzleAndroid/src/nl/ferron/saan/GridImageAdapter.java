@@ -3,13 +3,18 @@ package nl.ferron.saan;
 import java.util.ArrayList;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
+import android.net.Uri;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
 
+/**
+ * Adapter for the GridView to show the game
+ */
 public class GridImageAdapter extends BaseAdapter {
 
 	private Context mContext;

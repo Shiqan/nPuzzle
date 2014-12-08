@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:text="Continue" 
+        android:text="@string/btn_continue" 
         android:visibility="gone"/>
 
     <Button
@@ -19,22 +19,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btn_continue"
-        android:text="New Puzzle" />
+        android:text="@string/btn_new" />
 
     <Button
         android:id="@+id/btn_highscores"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/btn_new"
-        android:text="Highscores" />
+        android:text="@string/btn_highscores" />
     
-       <TextView
+    <TextView
         android:id="@+id/txt_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
-        android:text="Ferron Saan 10386831"
+        android:text="@string/author"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
 </RelativeLayout>

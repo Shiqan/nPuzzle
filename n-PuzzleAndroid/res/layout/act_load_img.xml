@@ -1,74 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#ebebe3"
-    android:orientation="vertical" >
-
-    <HorizontalScrollView
-        android:id="@+id/horizontalScrollView1"
-        android:layout_width="wrap_content"
-        android:layout_height="230dip"
-        android:fillViewport="True" >
-	
-        <LinearLayout
-            android:id="@+id/hsvLinearlayout"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:orientation="horizontal" >
-
-            <!-- ImageButton
-                android:id="@+id/imageButton1"                
-                android:src="@drawable/puzzle_0"
-                android:layout_width="fill_parent"
-                android:layout_height="250dp"
-                android:adjustViewBounds="true"
-                android:contentDescription="@string/imgcontent"
-                android:scaleType="fitCenter"
-                android:background="@null" /--> 
-            
-        </LinearLayout>
-    </HorizontalScrollView>
-    
-    <!-- <SlidingDrawer
-	    android:id="@+id/split_slider"
-	    android:layout_width="match_parent"
-	    android:layout_height="match_parent"
-	    android:layout_alignParentBottom="true"
-	    android:content="@+id/split_numbers"
-	    android:handle="@+id/split_image"
-	    android:topOffset="230dip" >
-		
-		<Button android:id="@id/split_image"
-				android:text="@string/slidingdrawer"
-				android:layout_width="fill_parent"
-				android:layout_height="wrap_content"/>
-		
-		<LinearLayout
-		    android:id="@id/split_numbers"
-		    android:layout_width="match_parent"
-		    android:layout_height="126dp"
-		    android:orientation="vertical" >
-	
-						<Button android:id="@+id/easybutton"
-								android:text="@string/easy"
-								android:clickable="true"
-								android:layout_width="match_parent"
-								android:layout_height="wrap_content"/>
-						
-						<Button android:id="@+id/mediumbutton"
-								android:text="@string/medium"
-								android:clickable="true"
-								android:layout_width="match_parent"
-								android:layout_height="wrap_content"/>
-				
-						<Button android:id="@+id/hardbutton"
-								android:text="@string/hard"
-								android:clickable="true"
-								android:layout_width="match_parent"
-								android:layout_height="wrap_content"/>
-								
-		</LinearLayout>
-	</SlidingDrawer>
-	-->
-</RelativeLayout>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+ 
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="#b5b5b5"
+        android:dividerHeight="1dp" />
+ 
+</LinearLayout>

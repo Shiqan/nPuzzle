@@ -15,7 +15,10 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
-public class MainActivity extends DrawerActivity {
+/**
+ * Main screen with buttons to the other Activities 
+ */
+public class MainActivity extends NavDrawer {
 	
 	public static final String PREFS_NAME = "nPuzzleFile";
 	SharedPreferences prefs;
@@ -37,7 +40,6 @@ public class MainActivity extends DrawerActivity {
     			@Override
     			public void onClick(View v) {
     				startActivity(new Intent(getApplicationContext() ,GameActivity.class));
-					finish();
     			}
     		});
         	mContinue.setVisibility(View.VISIBLE);
@@ -51,7 +53,6 @@ public class MainActivity extends DrawerActivity {
 					onNewPuzzleDialog(null).show();
 				} else {
 					startActivity(new Intent(getApplicationContext() ,LoadImageActivity.class));
-					finish();
 				}
 			}
 		});
@@ -61,11 +62,13 @@ public class MainActivity extends DrawerActivity {
 			@Override
 			public void onClick(View v) {
 				startActivity(new Intent(getApplicationContext() ,HighscoreActivity.class));
-				finish();
 			}
 		});
 	}
 	
+	/**
+	 * Show dialog with warning when starting new puzzle if one already exists
+	 */
 	public Dialog onNewPuzzleDialog(Bundle savedInstanceState) {
 		AlertDialog.Builder builder = new AlertDialog.Builder(this);
 	    // Get the layout inflater
@@ -89,6 +92,14 @@ public class MainActivity extends DrawerActivity {
 			});
 	    return builder.create();
 	}
+	
+	/**
+	 * Open Github page in browser
+	 */
+	private void openWeb() {
+		Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Shiqan/Naive-App-Studio"));
+		startActivity(browserIntent);
+	}
 
 
 	@Override
@@ -109,12 +120,5 @@ public class MainActivity extends DrawerActivity {
 	            return super.onOptionsItemSelected(item);
 	    }
 	}
-	
-	private void openWeb() {
-		Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://github.com/Shiqan/Naive-App-Studio"));
-		startActivity(browserIntent);
-	}
-	
-	
 
 }
