@@ -7,8 +7,6 @@ import android.content.SharedPreferences;
  * Controller to save, retrieve and reset the highscores
  * 
  * @author FerronSaan
- * @mail ferron.saan@live.nl
- * @studentnumber 10386831
  */
 public class HighscoreControl {
 
