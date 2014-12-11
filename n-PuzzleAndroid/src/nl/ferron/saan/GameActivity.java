@@ -28,6 +28,8 @@ import android.widget.Toast;
  * Activity to show the game
  * 
  * @author FerronSaan
+ * @mail ferron.saan@live.nl
+ * @studentnumber 10386831
  */
 
 public class GameActivity extends NavDrawerActivity {

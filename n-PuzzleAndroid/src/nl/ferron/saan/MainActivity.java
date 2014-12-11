@@ -19,6 +19,8 @@ import android.widget.Button;
  * Activity for the main screen with buttons to the other Activities
  * 
  * @author FerronSaan
+ * @mail ferron.saan@live.nl
+ * @studentnumber 10386831
  */
 public class MainActivity extends NavDrawerActivity {
 

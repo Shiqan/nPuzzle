@@ -10,6 +10,8 @@ import android.widget.TextView;
  * Activity to show highscores
  * 
  * @author FerronSaan
+ * @mail ferron.saan@live.nl
+ * @studentnumber 10386831
  */
 public class HighscoreActivity extends NavDrawerActivity {
 

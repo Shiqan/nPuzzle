@@ -10,6 +10,8 @@ import android.os.Handler;
  * (MainActivity)
  * 
  * @author FerronSaan
+ * @mail ferron.saan@live.nl
+ * @studentnumber 10386831
  */
 public class SplashScreenActivity extends Activity {
 
