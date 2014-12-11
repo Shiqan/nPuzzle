@@ -6,12 +6,15 @@ import android.os.Bundle;
 import android.os.Handler;
 
 /**
- * Show splashscreen for 1 second before going to the MainActivity
+ * Activity to show splashscreen for 1 second before going to the main screen
+ * (MainActivity)
+ * 
+ * @author FerronSaan
  */
 public class SplashScreenActivity extends Activity {
 
-	// Splash screen timer
-	private static int SPLASH_TIME_OUT = 1000;
+	// SplashScreen timer
+	private int mSplashTime = 1000;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -20,17 +23,16 @@ public class SplashScreenActivity extends Activity {
 
 		new Handler().postDelayed(new Runnable() {
 
-			/*
-			 * Showing splash screen for 1 seconds
-			 */
+			//
 
 			@Override
 			public void run() {
-				Intent i = new Intent(getApplicationContext() ,MainActivity.class);           	
+				Intent i = new Intent(getApplicationContext(),
+						MainActivity.class);
 				startActivity(i);
 				finish();
 			}
-		}, SPLASH_TIME_OUT);
+		}, mSplashTime);
 	}
 
 }

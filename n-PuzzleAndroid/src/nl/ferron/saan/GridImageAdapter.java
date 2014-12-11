@@ -3,9 +3,7 @@ package nl.ferron.saan;
 import java.util.ArrayList;
 
 import android.content.Context;
-import android.content.Intent;
 import android.graphics.Bitmap;
-import android.net.Uri;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -14,28 +12,31 @@ import android.widget.ImageView;
 
 /**
  * Adapter for the GridView to show the game
+ * 
+ * @author FerronSaan
  */
 public class GridImageAdapter extends BaseAdapter {
 
 	private Context mContext;
-	private ArrayList<Bitmap> imageTiles;
-	private int imageWidth, imageHeight;
-	
+	private ArrayList<Bitmap> mImageTiles;
+	private int mImgWidth;
+	private int mImgHeight;
+
 	public GridImageAdapter(Context c, ArrayList<Bitmap> images) {
 		mContext = c;
-		imageTiles = images;
-		imageWidth = images.get(0).getWidth();
-		imageHeight = images.get(0).getHeight();
+		mImageTiles = images;
+		mImgWidth = images.get(0).getWidth();
+		mImgHeight = images.get(0).getHeight();
 	}
-	
+
 	@Override
 	public int getCount() {
-		return imageTiles.size();
+		return mImageTiles.size();
 	}
 
 	@Override
 	public Object getItem(int position) {
-		return imageTiles.get(position);
+		return mImageTiles.get(position);
 	}
 
 	@Override
@@ -48,15 +49,14 @@ public class GridImageAdapter extends BaseAdapter {
 		ImageView image;
 		if (convertView == null) {
 			image = new ImageView(mContext);
-			image.setLayoutParams(new GridView.LayoutParams(imageWidth, imageHeight));
+			image.setLayoutParams(new GridView.LayoutParams(mImgWidth,
+					mImgHeight));
 			image.setPadding(1, 1, 1, 1);
-			image.setTag(position);
-			
+
 		} else {
 			image = (ImageView) convertView;
 		}
-		image.setImageBitmap(imageTiles.get(position));
-		image.setTag(position);
+		image.setImageBitmap(mImageTiles.get(position));
 		return image;
 	}
 }
