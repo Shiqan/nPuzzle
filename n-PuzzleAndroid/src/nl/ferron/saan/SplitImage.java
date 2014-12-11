@@ -13,8 +13,6 @@ import android.view.Display;
  * Split the image into specific number of tiles
  * 
  * @author FerronSaan
- * @mail ferron.saan@live.nl
- * @studentnumber 10386831
  */
 public class SplitImage {
 
