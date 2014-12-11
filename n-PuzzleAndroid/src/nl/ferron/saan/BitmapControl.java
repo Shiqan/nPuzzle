@@ -8,8 +8,6 @@ import android.graphics.BitmapFactory;
  * Controller to decode images to bitmaps
  * 
  * @author FerronSaan
- * @mail ferron.saan@live.nl
- * @studentnumber 10386831
  */
 public class BitmapControl {
 	public static int calculateInSampleSize(BitmapFactory.Options options,
