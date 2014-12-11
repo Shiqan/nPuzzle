@@ -15,8 +15,6 @@ import android.widget.TextView;
  * Adapter for the listview to show the images to play the game with
  * 
  * @author FerronSaan
- * @mail ferron.saan@live.nl
- * @studentnumber 10386831
  */
 public class ListImageAdapter extends BaseAdapter {
 	private static Context mContext;
