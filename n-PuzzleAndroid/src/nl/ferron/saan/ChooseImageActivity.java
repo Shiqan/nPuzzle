@@ -20,8 +20,6 @@ import android.widget.ListView;
  * Activity to choose an image to play the game with
  * 
  * @author FerronSaan
- * @mail ferron.saan@live.nl
- * @studentnumber 10386831
  */
 public class ChooseImageActivity extends NavDrawerActivity {
 	// default number of tiles
