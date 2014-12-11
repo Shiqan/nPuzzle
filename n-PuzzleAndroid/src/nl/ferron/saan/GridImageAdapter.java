@@ -14,8 +14,6 @@ import android.widget.ImageView;
  * Adapter for the GridView to show the game
  * 
  * @author FerronSaan
- * @mail ferron.saan@live.nl
- * @studentnumber 10386831
  */
 public class GridImageAdapter extends BaseAdapter {
 
